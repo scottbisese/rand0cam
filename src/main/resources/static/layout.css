@@ -1,0 +1,71 @@
+body, #main{
+  background-color: black !important;
+}
+
+
+#main, html, body,div, div[class], iframe[class] {
+  width: 100vw !important;
+} 
+
+.logo {
+  background-color: blue;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  text-align: center;
+  color: #0f0;
+  font-size: 1.5vw;
+}
+
+.grid-container {
+  font-size: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* three equal columns */
+  justify-items: center; /* center items horizontally */
+  align-items: center; /* center items vertically */
+  margin-top: 1vw;
+  height: 1vw;
+}
+
+.one {
+  font-family: 'Futura', sans-serif;
+  text-decoration: none;
+  color: red;
+  margin-left: 1vw;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.two {
+  font-family: 'Futura', sans-serif;
+  text-decoration: none;
+  color: blue;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.four {
+  font-size: 1vw;
+  font-family: 'Futura', sans-serif;
+  text-decoration: none;
+  color: green;
+  margin-right: 1vw;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+h3 {
+  background-color: darkblue;
+  font-family: 'Futura', sans-serif;
+  color: white;
+  font-family: Futura;
+  font-size: 1.5vw !important;
+  text-align: center;
+  justify-content: center; 
+  float:top;
+}
+
+iframe {
+  width: 100vw !important;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Webcam Viewer</title>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3 id="webcam-title">Webcam Title</h3>
+    <iframe id="webcam-frame" style="width:600px; height:400px;"></iframe>
+    <button class="refresh">Refresh Webcam</button>
+
+    <script>
+        $('button.refresh').click((event) => {
+            $.getJSON('/webcam/random', (webcam) => {
+                $('#webcam-title').text(webcam.title);
+                $('#webcam-frame').attr('src', `https://api.windy.com/api/webcams/v2/${webcam.id}`);
+                $('title').text(webcam.title);
+            });
+        });
+    </script>
+</body>
+</html>
