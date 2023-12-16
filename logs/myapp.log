@@ -25828,3 +25828,38 @@ This generated password is for development use only. Your security configuration
 2023-12-16T16:49:39.586-06:00  INFO 34239 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-16T16:49:39.590-06:00  INFO 34239 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-12-16T16:49:39.596-06:00  INFO 34239 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-16T17:12:10.516-06:00  INFO 35673 --- [main] a.randocam.RandocamApplication           : Starting RandocamApplication using Java 17.0.1 with PID 35673 (/Users/scottbisese/Downloads/randocam/target/classes started by scottbisese in /Users/scottbisese/Downloads/randocam)
+2023-12-16T17:12:10.517-06:00  INFO 35673 --- [main] a.randocam.RandocamApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-12-16T17:12:11.089-06:00  INFO 35673 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-16T17:12:11.089-06:00  INFO 35673 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-16T17:12:11.099-06:00  INFO 35673 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2023-12-16T17:12:11.205-06:00  INFO 35673 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=777348b9-7357-3efa-a0c7-79cd753c62cd
+2023-12-16T17:12:11.316-06:00  WARN 35673 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.azure.spring.cloud.autoconfigure.implementation.jdbc.AzureJdbcAutoConfiguration' of type [com.azure.spring.cloud.autoconfigure.implementation.jdbc.AzureJdbcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2023-12-16T17:12:11.317-06:00  WARN 35673 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springTokenCredentialProviderContextProvider' of type [com.azure.spring.cloud.autoconfigure.implementation.jdbc.SpringTokenCredentialProviderContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor []? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2023-12-16T17:12:11.432-06:00  INFO 35673 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-16T17:12:11.437-06:00  INFO 35673 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-16T17:12:11.437-06:00  INFO 35673 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-16T17:12:11.474-06:00  INFO 35673 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-16T17:12:11.474-06:00  INFO 35673 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 834 ms
+2023-12-16T17:12:11.553-06:00  INFO 35673 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-16T17:12:12.590-06:00  INFO 35673 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 85695eb2-a20e-456b-9552-56f28584a986
+2023-12-16T17:12:12.592-06:00  INFO 35673 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-16T17:12:12.625-06:00  INFO 35673 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-16T17:12:12.658-06:00  INFO 35673 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-16T17:12:12.676-06:00  INFO 35673 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-12-16T17:12:12.782-06:00  INFO 35673 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-16T17:12:12.806-06:00  WARN 35673 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-16T17:12:13.173-06:00  INFO 35673 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-16T17:12:13.176-06:00  INFO 35673 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-16T17:12:13.206-06:00  WARN 35673 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-16T17:12:13.227-06:00  WARN 35673 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 51ce1b6c-4d48-48cb-8e5a-caa7e56ba4e5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-12-16T17:12:13.288-06:00  INFO 35673 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-12-16T17:12:13.363-06:00  INFO 35673 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@498503cb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@380e3122, org.springframework.security.web.context.SecurityContextHolderFilter@22ed2886, org.springframework.security.web.header.HeaderWriterFilter@618e7761, org.springframework.web.filter.CorsFilter@576323ff, org.springframework.security.web.authentication.logout.LogoutFilter@7be6dabb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41f61188, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4abfa2ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38c1b1a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fc386f8, org.springframework.security.web.access.ExceptionTranslationFilter@37ab1b10, org.springframework.security.web.access.intercept.AuthorizationFilter@7ef3aa21]
+2023-12-16T17:12:13.509-06:00  INFO 35673 --- [main] AbstractAzureServiceClientBuilderFactory : Will configure the default credential of type DefaultAzureCredential for class com.azure.identity.DefaultAzureCredentialBuilder.
+2023-12-16T17:12:13.836-06:00  INFO 35673 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-16T17:12:13.851-06:00  INFO 35673 --- [main] a.randocam.RandocamApplication           : Started RandocamApplication in 3.574 seconds (process running for 3.892)
