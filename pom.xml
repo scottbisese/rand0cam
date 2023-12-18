@@ -46,14 +46,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-groovy-templates</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mustache</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
@@ -134,6 +126,29 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+<dependency>
+    <groupId>com.azure.spring</groupId>
+    <artifactId>spring-cloud-azure-starter-active-directory</artifactId>
+    <version>5.8.0</version>
+    <exclusions>
+        <!-- Exclude Spring Security Web -->
+        <exclusion>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </exclusion>
+        <!-- Exclude Spring Security Config -->
+        <exclusion>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </exclusion>
+        <!-- Exclude Spring Security Core -->
+        <exclusion>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
 	</dependencies>
 
 	</dependencyManagement>
