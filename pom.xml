@@ -11,6 +11,7 @@
 	<groupId>azuresites</groupId>
 	<artifactId>randocam</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>randocam</name>
 	<description>Grabs live webcams from around the world, can save and socialize through comments!</description>
 	<properties>

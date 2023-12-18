@@ -5,6 +5,8 @@ target/
 !**/src/test/**/target/
 #**/target/classes/application.properties      leaving these uncommented so URNESS can check it.
 #**/src/main/resources/application.properties
+target/
+!target/*.war
 
 ### STS ###
 .apt_generated

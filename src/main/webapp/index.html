@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="webcamHeader">Rand0caM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            background-color: black;
+            color: white;
+        }
+        #webcam {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="webcamTitle">Random Webcam</h1>
+    <iframe id="webcam" width="100%" height="700px" frameborder="0" allow="autoplay" style="border:none; overflow:hidden" scrolling="no"></iframe>
+    <input type="text" width="80%" id="commentInput" placeholder="Say a Thing" />
+    <button id="submitComment">Submit</button>
+    <script>
+        var webcamId = '';
+        var webcamTitle = '';
+    
+        $(document).ready(function() {
+            $.get("/webcam/random", function(response) {
+                if (response && response.id) {
+                    var webcamStreamUrl = "https://webcams.windy.com/webcams/stream/" + response.id;
+                    $("#webcam").attr("src", webcamStreamUrl);
+                    if (response.title) {
+                        $("#webcamTitle").text(response.title);
+                        webcamTitle = response.title;
+                    }
+                    webcamId = response.id;
+                } else {
+                    console.log("No active webcam found");
+                }
+            });
+    
+            function submitComment() {
+                var comment = $("#commentInput").val();
+                if (comment) {
+                    $.ajax({
+                        url: "/comments",
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({ id: webcamId, title: webcamTitle, comment: comment }),
+                        success: function(response) {
+                            console.log(response);
+                            $("#commentInput").val(''); // Clear the input field after submission
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error saving comment: " + error);
+                        }
+                    });
+                } else {
+                    console.log("Comment or webcam information is missing");
+                }
+            }
+    
+             // Event binding for the submit button
+        $("#submitComment").on('click', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            submitComment();
+        });
+
+        // Event binding for pressing Enter key in the comment input field
+        $("#commentInput").keypress(function(event) {
+            if (event.which == 13) { // 13 is the Enter key
+                event.preventDefault(); // Prevent the default action (form submission)
+                submitComment();
+            }
+        });
+    });
+</script>
+</body>
+</html>
