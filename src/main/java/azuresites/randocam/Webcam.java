@@ -1,6 +1,12 @@
 package azuresites.randocam;
 
-public class Webcam {
+public class Webcam extends WebcamDTO {
+    public Webcam(String id, String title) {
+        super(id, title);
+        this.title = title;
+        this.id = id;
+    }
+
     private String id;
     private String status;
     private String title;
@@ -41,9 +47,7 @@ public class Webcam {
 
     public static class Player {
         private Live live;
-        // other fields if necessary
-
-        // Getters and setters for live
+       
         public Live getLive() {
             return live;
         }
@@ -56,7 +60,6 @@ public class Webcam {
             private boolean available;
             private String embed;
 
-            // Getters and setters for available and embed
             public boolean isAvailable() {
                 return available;
             }
