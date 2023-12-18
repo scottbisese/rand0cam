@@ -1,5 +1,4 @@
-# Getting Started
-make sure you have MAVEN, and then go to the directory where the pom.xml is located and type 'MVN CLEAN INSTALL' in the terminal.. this will get you all the dependencies.
+
 
 
 
