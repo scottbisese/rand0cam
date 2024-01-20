@@ -23,7 +23,7 @@
 	<name>randocam</name>
 	<description>Grabs live webcams from around the world, can save and socialize through comments!</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<spring-cloud-azure.version>5.8.0</spring-cloud-azure.version>
 		<spring-cloud.version>2023.0.0</spring-cloud.version>
 	</properties>
